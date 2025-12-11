@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basics';
+  public name:string = "fawzan";
+  age:number = 25;
+
+  backgroundColor:string = "cyan";
+  buttonName:string = "register";
+  placeHolder:string = "Enter the name";
 }
