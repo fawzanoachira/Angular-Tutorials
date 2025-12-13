@@ -13,4 +13,10 @@ export class AppComponent {
   backgroundColor:string = "cyan";
   buttonName:string = "register";
   placeHolder:string = "Enter the name";
+
+  onNameChange(event:any) {
+    this.name = event.target.value;
+  }
+
+  public ng_model_string:string="";
 }
