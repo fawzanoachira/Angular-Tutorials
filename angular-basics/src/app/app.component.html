@@ -1,6 +1,6 @@
 
 
-<h1 [style.backgroundColor]="backgroundColor">Hello world</h1>
+<h1 [style.backgroundColor]="backgroundColor" class="container text-primary">Hello world</h1>
 <h1><a routerLink="first">Router Link Example</a></h1>
 <input type="text" [value]="backgroundColor" [placeholder]="placeHolder">
 <input type="submit" [value]="buttonName">
@@ -14,6 +14,10 @@
 <input type="text" [(ngModel)]="ng_model_string">
 <p>{{ng_model_string}}</p>
 
+<div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p>
+</div>
 
 <router-outlet></router-outlet>
 <!-- <app-first></app-first> -->
