@@ -1,12 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './first/first.component';
+import { DirectiveComponent } from './directive/directive.component';
+import { SecondComponent } from './second/second.component';
 
 const routes: Routes = [
   {
     path:"first",
     component:FirstComponent
-  }
+  },
+  {
+    path:"directives",
+    component:DirectiveComponent
+  },
+  {
+    path:"second",
+    component:SecondComponent
+  },
 ];
 
 @NgModule({
