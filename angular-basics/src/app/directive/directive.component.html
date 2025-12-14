@@ -2,3 +2,8 @@
 <div class="container" *ngFor="let name of names">
     <p>Iterated: {{name}}</p>
 </div>
+
+<div class="container">
+    <input type="text" class="mt-5" [(ngModel)]="searched_text">
+</div>
+<p class="mt-3 ms-3"  *ngIf="searched_text != ''">Searched Text: {{searched_text}}</p>

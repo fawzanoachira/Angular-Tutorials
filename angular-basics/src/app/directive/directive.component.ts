@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DirectiveComponent {
     public names:string[] = ["ABC", "DEF"];
+
+    public searched_text:string="";
+
+    searchText(event:any){
+      this.searched_text = event.target.value;
+    }
 }
