@@ -3,19 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { SecondComponent } from './second/second.component';
+import { ThirdComponent } from './third/third.component';
 
 const routes: Routes = [
   {
-    path:"first",
-    component:FirstComponent
+    path: "first",
+    component: FirstComponent
   },
   {
-    path:"directives",
-    component:DirectiveComponent
+    path: "directives",
+    component: DirectiveComponent
   },
   {
-    path:"second",
-    component:SecondComponent
+    path: "second",
+    component: SecondComponent
+  },
+  {
+    path: "third",
+    component: ThirdComponent
   },
 ];
 

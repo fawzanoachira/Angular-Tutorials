@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input class="form-control" type="text" name="name" id="" [(ngModel)]="user.name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input class="form-control" type="text" name="email" id="" [(ngModel)]="user.email">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container mt-5" *ngIf="submittedData">
+    <h1 class="h1">Submitted Data</h1>
+    <p class="lead">
+        Name: <strong>{{submittedData.name}}</strong>
+    </p>
+    <p class="lead">
+        Email: <strong>{{submittedData.email}}</strong>
+    </p>
+</div>
