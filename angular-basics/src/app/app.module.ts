@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectiveComponent } from './directive/directive.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
+import { ReactiveFormComponentComponent } from './reactive-form-component/reactive-form-component.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { ThirdComponent } from './third/third.component';
     FirstComponent,
     DirectiveComponent,
     SecondComponent,
-    ThirdComponent
+    ThirdComponent,
+    ReactiveFormComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

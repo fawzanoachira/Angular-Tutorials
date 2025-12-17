@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <form [formGroup]="reactiveFormData" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input class="form-control" type="text" name="name" id="name" formControlName="name">
+            <div *ngIf="reactiveFormData.get('name')?.invalid && reactiveFormData.get('name')?.touched">
+                <p style="color: red;">Name is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input class="form-control" type="email" name="email" id="email" formControlName="email">
+            <div *ngIf="reactiveFormData.get('email')?.invalid && reactiveFormData.get('email')?.touched">
+                <p *ngIf="reactiveFormData.get('email')?.errors?.['required']" style="color: red;">Email is required</p>
+                <p *ngIf="reactiveFormData.get('email')?.errors?.['email']" style="color: red;">Enter a valid email</p>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-2" type="submit" [disabled]="reactiveFormData.invalid">Submit</button>
+    </form>
+</div>
+
+<div class="container mt-5 " *ngIf="submittedData">
+    <h1 class="h1">Submitted Data</h1>
+    <pre>{{submittedData | json}}</pre>
+</div>
